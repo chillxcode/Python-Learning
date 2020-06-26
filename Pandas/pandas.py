@@ -41,11 +41,11 @@ print(dataFrame["NAME"])    # Print Column
 print(dataFrame.NAME)       # Same Thing
 print(dataFrame.iloc[:, 0]) # Print 0 index column
 
-dataFrame["SEXUALITY"] = ["male", "female", "female", "male"]   # Adding new feature (column)
+dataFrame["GENDER"] = ["male", "female", "female", "male"]   # Adding new feature (column)
 
 print(dataFrame.loc[:2, "AGE"]) #First 3 Row in Age column
 
-print(dataFrame.loc[:2, "AGE":"SEXUALITY"])
+print(dataFrame.loc[:2, "AGE":"GENDER"])
 
 print(dataFrame.loc[:2, ["NAME", "SALARY"]])    ##First 3 Row with specific column
 
@@ -80,7 +80,7 @@ dataFrame.columns = [each.split()[0] + "_" + each.split()[1] if len(each.split()
 # %% Drop and Concatenating
 
 # deletes column, axis = 1 in columns, axis = 0 is row, inplace = True is edit changes to real dataFrame
-dataFrame.drop(["SEXUALITY"],axis = 1, inplace = True)
+dataFrame.drop(["GENDER"],axis = 1, inplace = True)
 
 data1 = dataFrame.head()
 data2 = dataFrame.tail()
